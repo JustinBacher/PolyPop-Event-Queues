@@ -3,7 +3,7 @@
     "author": "Jab",
     "description": "Have multiple events that you don't want to happen at the same time? Use an event queue to make them wait for each-other!",
     "category": "Utilities",
-    "url": "",
+    "url": "https://github.com/JustinBacher/PolyPop-Event-Queues",
     "version": "1.0",
     "min_app_version": "1.0"
 }
