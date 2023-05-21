@@ -2,7 +2,7 @@
   <ID name="Self_ToolTip">Represents an event that can happen in the queue.</ID>
   <ID name="Timed_ToolTip">If checked the queue will wait until the duration is over. If un-checked the queue will wait until onComplete has been pressed to continue to the next event.</ID>
   <ID name="Duration_ToolTip">The length of time (in milliseconds) queue waits to continue to the next event.</ID>
-  <ID name="Queue_ToolTip">Add this event to the queue, actions may be added to the queue as many times as desired, they will run in the order they are enqueued.</ID>
-  <ID name="onAlert_ToolTip">Fires when this action is ran in the queue.</ID>
+  <ID name="Queue_ToolTip">Add this event to the queue. Events may be added to the queue as many times as desired, they will run in the order they are added.</ID>
+  <ID name="onAlert_ToolTip">Triggers when this event is ran in the queue.</ID>
   <ID name="onComplete_ToolTip">Continues to the next event in the queue. Make sure this is pressed when the event is completed. For example if this event makes text appear for 1 second then disappear, after that second this should be pressed or the queue will never continue to the next event.</ID>
 </stringtable>
