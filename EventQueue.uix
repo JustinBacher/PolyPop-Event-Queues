@@ -1,0 +1,5 @@
+<uix type="Source">
+  <add_menu_group>Event Managers</add_menu_group>
+  <category>Queues</category>
+  <name>Event Queue</name>
+</uix>

@@ -1,0 +1,8 @@
+<stringtable>
+  <ID name="Self_ToolTip">Represents some action that can happen in the queue</ID>
+  <ID name="Settings_Delay_ToolTip">The delay (in milliseconds) between queued actions.</ID>
+  <ID name="Settings_ClearQueue_ToolTip">Removes all queued actions from the queue. (currently running alerts will not be stopped, this only prevents the queue from playing any more events)</ID>
+  <ID name="Settings_PauseQueue_ToolTip">Pauses the queue. (currently running alerts will not be stopped, this only prevents the queue from playing any more events)</ID>
+  <ID name="Settings_UnpauseQueue_ToolTip">Unpause the queue. (If there are events in the queue it will start them)</ID>
+  <ID name="Actions_ToolTip">Events that can happen in the queue.</ID>
+</stringtable>
