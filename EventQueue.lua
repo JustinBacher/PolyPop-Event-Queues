@@ -8,8 +8,7 @@ Instance.properties = properties({
         items={
             {name="Delay", type="Int", units="ms", range={min=0}, ui={easing=5000, stride=100}},
             {name="ClearQueue", type="Action"},
-            {name="PauseQueue", type="Action"},
-            {name="UnpauseQueue", type="Action"}
+            {name="Paused", type="Bool", onUpdate="onPausedUpdate"},
         },
         ui={expand=true}
     },
@@ -22,21 +21,16 @@ Instance.properties = properties({
 })
 
 function Instance:onInit()
+    if self.properties.Events:getKit():getObjectCount() > 0 then
+        getUI():setUIProperty({{obj=self.properties.Settings:find("Settings"), expand=false}})
+    end
     self:ClearQueue()
 end
 
-function Instance:PauseQueue()
-    self.paused = true
-    getUI():setUIProperty({{obj=self.properties.Settings:find("PauseQueue"), visible=false}})
-    getUI():setUIProperty({{obj=self.properties.Settings:find("UnpauseQueue"), visible=true}})
-end
-
-function Instance:UnpauseQueue()
-    self.paused = false
-    getUI():setUIProperty({{obj=self.properties.Settings:find("PauseQueue"), visible=true}})
-    getUI():setUIProperty({{obj=self.properties.Settings:find("UnpauseQueue"), visible=false}})
-
-    self:runNext()
+function Instance:onPausedUpdate()
+    if not self.properties.Settings.Paused then
+        self:runNext()
+    end
 end
 
 function Instance:setEventName(event)
@@ -77,7 +71,7 @@ function Instance:onQueueableCompleted()
 end
 
 function Instance:runNext()
-    if self.paused or self.queue:is_empty() then
+    if self.properties.Settings.Paused or self.queue:is_empty() then
         return
     end
 

@@ -2,7 +2,6 @@
   <ID name="Self_ToolTip">A queue allows events to wait for each-other.</ID>
   <ID name="Settings_Delay_ToolTip">The delay (in milliseconds) between queued events.</ID>
   <ID name="Settings_ClearQueue_ToolTip">Removes all queued events from the queue. (currently running events will not be stopped, this only prevents the queue from running any more)</ID>
-  <ID name="Settings_PauseQueue_ToolTip">Pauses the queue. (currently running alerts will not be stopped, this only prevents the queue from running any more events) Pausing the queue does not clear the queue, and events can still be added while the queue is paused</ID>
-  <ID name="Settings_UnpauseQueue_ToolTip">Unpause the queue. (If there are events in the queue it will start running them)</ID>
+  <ID name="Settings_Paused_ToolTip">Sets whether the queue is paused or not. When the queue is paused currently running events will not be stopped. Pausing the queue does not clear the queue, and events can still be added while the queue is paused. Queued events will start when the queue is unpaused.</ID>
   <ID name="Events_ToolTip">Events that can happen in the queue. There can be multiple different events in the queue.</ID>
 </stringtable>
